@@ -1,0 +1,100 @@
+/* --- Configuración General --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3e5f5; /* Fondo lila suave */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px; /* Un poco de espacio alrededor */
+}
+
+/* --- Contenedor Principal (La tarjeta blanca) --- */
+.contenedor-principal {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 10px 25px rgba(74, 20, 140, 0.15);
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que nada se salga */
+    
+    /* ESTO SOLUCIONA TU ERROR DE LA IMAGEN: */
+    display: flex;
+    flex-direction: column; /* Obliga a que sea vertical (uno abajo del otro) */
+}
+
+/* --- Navegación --- */
+nav {
+    background: linear-gradient(90deg, #7b1fa2 0%, #4a148c 100%);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e1bee7; /* Lila claro al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* --- Área de Contenido --- */
+/* Seleccionamos el div que sigue a la navegación */
+.contenedor-principal > div:last-child, .contenido {
+    padding: 3rem 2rem;
+    text-align: center;
+    display: block; /* Asegura que ocupe el ancho disponible */
+}
+
+h1 {
+    color: #4a148c;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Botones y enlaces de acción */
+a[href="contacto.html"] {
+    display: inline-block;
+    margin-top: 10px;
+    color: #7b1fa2;
+    font-weight: bold;
+}
